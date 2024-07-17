@@ -33,7 +33,7 @@ app.use('/api', router)
 /** start server only when we have valid connection */
 connect().then(() => {
     try {
-        app.listen(port, () => {
+        app.listen(port, '0.0.0.0',() => {
             console.log(`Server connected to http://localhost:${port}`);
         })
     } catch (error) {
